@@ -1,5 +1,5 @@
 {
-  "name": "xml2js-cli",
+  "name": "x2js-cli",
   "version": "0.0.1",
   "description": "Convert an XML input to a JSON output, using xml2js",
   "main": "main.js",
@@ -13,10 +13,10 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "homepage": "https://github.com/dynnamitt/xml2js-cli",
+  "homepage": "https://github.com/dynnamitt/x2js-cli",
   "repository": {
     "type": "git",
-    "url": "https://github.com/dynnamitt/xml2js-cli.git"
+    "url": "https://github.com/dynnamitt/x2js-cli.git"
   },
   "keywords": [
     "xml",
