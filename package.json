@@ -22,9 +22,12 @@
     "xml",
     "json",
     "xml2json",
-    "xml2js"
+    "xml2js",
+    "cli",
+    "shell",
+    "convert"
   ],
-  "author": "François Parmentier",
+  "author": "Kjetil Flovild-Midtlie",
   "license": "GNUv3",
   "readmeFilename": "README"
 }

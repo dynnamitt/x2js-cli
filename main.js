@@ -5,17 +5,19 @@ var xml2js = require('xml2js'),
     optimist = require('optimist'),
     argv = optimist
       .options('help',
-        {alias:'h', describe: 'Show help'})
+        {alias:'h', describe: 'show help'})
       .options('indents',
         {alias:'i', 
-         describe: "Indents. Num of spaces",
+         describe: "indents. Num of spaces",
          default: 2})
       .options('encoding',
         {alias:'e',
          describe: 'encoding if using stdin',
          default:'utf8'})
       .options('noroot',
-        {alias:'n',describe: 'strip root elem in output'})
+        {alias:'n',
+         describe: 'strip root elem in output'})
+      .boolean('noroot')
       .usage('Reads xml and writes to standard output.\nUsage : ' +
         name + ' [options] FILE|-')
       .argv,
@@ -27,9 +29,13 @@ if ( !fileParam || argv.help ){
   optimist.showHelp();
   process.exit(0);
 }
-
 parser.addListener('end', function(result) {
-  console.log( JSON.stringify(result,null,2));
+  var json = result;
+
+  if(argv.noroot && Object.keys(json).length===1){
+     json = json[Object.keys(json)[0]];
+  }
+  console.log( JSON.stringify(json,null,argv.indents));
 });
 
 
@@ -45,6 +51,7 @@ if ( fileParam === '-' ){
     parser.parseString(xmlBuf);
   });
 } else {
+  // open a file
   filePath = path.resolve(__dirname,fileParam);
   fs.readFile(filePath, function(err, data) {
     parser.parseString(data);
