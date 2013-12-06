@@ -1,1 +1,1 @@
-Usage: x2js [options] < INFILE > OUTFILE
+Usage: x2js [options] INFILE|- > OUTFILE
