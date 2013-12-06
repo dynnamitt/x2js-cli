@@ -1,1 +1,9 @@
-Usage: x2js [options] INFILE|- > OUTFILE
+Reads xml and writes to standard output.
+Usage : x2js [options] FILE|-
+
+Options:
+  --help, -h      Show help                
+  --indents, -i   Indents. Num of spaces     [default: 2]
+  --encoding, -e  encoding if using stdin    [default: "utf8"]
+  --noroot, -n    strip root elem in output
+

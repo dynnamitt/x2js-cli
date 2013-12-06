@@ -17,7 +17,7 @@ var xml2js = require('xml2js'),
       .options('noroot',
         {alias:'n',describe: 'strip root elem in output'})
       .usage('Reads xml and writes to standard output.\nUsage : ' +
-        name + ' [--help] [--noroot] FILE|-')
+        name + ' [options] FILE|-')
       .argv,
     fileParam = argv._[0],
     parser = new xml2js.Parser(),
