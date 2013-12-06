@@ -1,0 +1,30 @@
+{
+  "name": "xml2js-cli",
+  "version": "0.0.1",
+  "description": "Convert an XML input to a JSON output, using xml2js",
+  "main": "main.js",
+  "bin" : { "x2js" : "main.js" },
+  "preferGlobals" : true,
+  "dependencies": {
+    "xml2js": "0.4.x",
+    "optimist": "0.6.x"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "homepage": "https://github.com/dynnamitt/xml2js-cli",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dynnamitt/xml2js-cli.git"
+  },
+  "keywords": [
+    "xml",
+    "json",
+    "xml2json",
+    "xml2js"
+  ],
+  "author": "François Parmentier",
+  "license": "GNUv3",
+  "readmeFilename": "README"
+}
