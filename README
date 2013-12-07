@@ -1,4 +1,4 @@
-Reads xml and writes to standard output.
+Reads xml and writes JSON to standard output.
 
 Usage : x2js [options] FILE|-
 
